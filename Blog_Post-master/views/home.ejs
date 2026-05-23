@@ -1,0 +1,21 @@
+<%- include('partials/header'); -%>
+
+<h1>Home</h1>
+<p><%= startingContent %></p>
+
+<% posts.forEach(function(post) { %>
+  <form action="/delete/<%= post._id %>" method="post">
+    <h1><%= post.title %></h1>
+    <p>
+      <% if (post.content) { %>
+        <%= post.content.substring(0, 100) + " ..." %>
+      <% } else { %>
+        <%= "Content not available" %>
+      <% } %>
+      <a href="/posts/<%= post._id %>">Read More</a>
+      <button type="submit" class="delete__button">Delete Post</button>
+    </p>
+  </form>
+<% }); %>
+
+

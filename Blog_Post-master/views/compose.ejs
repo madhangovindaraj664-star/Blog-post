@@ -1,0 +1,11 @@
+<%- include('partials/header'); -%>
+
+<h1>Compose</h1>
+<form action="/compose" method="post" enctype="multipart/form-data">
+  <input type="text" name="postTitle" placeholder="Title" required>
+  <textarea name="postBody" placeholder="Content" required></textarea>
+  <input type="file" name="postImage">
+  <button type="submit">Submit</button>
+</form>
+
+

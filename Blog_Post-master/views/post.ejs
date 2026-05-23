@@ -1,0 +1,12 @@
+<%- include('partials/header'); -%>
+
+<h1><%= title %></h1>
+<p><%= content %></p>
+
+<% if (image) { %>
+  <img src="/uploads/<%= image %>" alt="Post Image" style="max-width: 70%; height: auto;">
+<% } %>
+
+<!-- Back Button -->
+<a href="/" class="back-button">Back</a>
+
